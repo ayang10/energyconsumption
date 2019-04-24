@@ -13,7 +13,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="search-handle">Search</span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-handle">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-handle" v-model="search" />
                         </div>
                     </div>
                     <div class="form-group col-md-4">
@@ -21,7 +21,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="sort">Sort</label>
                             </div>
-                            <select class="custom-select" id="sort">
+                            <select class="custom-select" id="sort" @change="sortEnergyAvg($event)">
                                 <option selected>Choose...</option>
                                 <option value="asc">Ascending</option>
                                 <option value="desc">Descending</option>
@@ -41,7 +41,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(property, index) in listProperties" :key="'property'+index">
+                    <tr v-for="(property, index) in searchFilter" :key="'property'+index">
                         <td>{{property.address}}, {{property.city}} {{property.state}} {{property.zip}}</td>
                         <td>{{getEnergyAvg(property.energy)}}</td>
                     </tr>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="chart">
-        
+            <div id="chart"></div>
         </div>
     </div>
 </div>

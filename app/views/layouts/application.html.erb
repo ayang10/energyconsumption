@@ -7,8 +7,11 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://unpkg.com/frappe-charts@1.1.0/dist/frappe-charts.min.iife.js', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
