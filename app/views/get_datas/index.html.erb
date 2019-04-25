@@ -21,8 +21,8 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="sort">Sort</label>
                             </div>
-                            <select class="custom-select" id="sort" @change="sortEnergyAvg($event)">
-                                <option selected>Choose...</option>
+                            <select class="custom-select" v-model="sort">
+                                <option selected value="" disabled>Choose...</option>
                                 <option value="asc">Ascending</option>
                                 <option value="desc">Descending</option>
                             </select>
