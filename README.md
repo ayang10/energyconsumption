@@ -1,4 +1,4 @@
-#Simple Energy Consumption Web App
+# Simple Energy Consumption Web App
 
 * Ruby on Rails
 * Bootstrap 4 components
